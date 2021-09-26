@@ -1,5 +1,8 @@
 package fundamentos;
 
+import java.util.Date;
+import java.util.Scanner;
+
 public class fundamentos_dos_fundamentos {
 	
 	public static void main(String[] args) {
@@ -12,10 +15,20 @@ public class fundamentos_dos_fundamentos {
 		circumference_area();
 		System.out.println("——————————————————");
 		notation_point();
+		System.out.println("——————————————————");
+		import_date();
+		System.out.println("——————————————————");
+		scanner_in();
+		System.out.println("——————————————————");
+		wrapper();
+		System.out.println("——————————————————");
+		logical_operators();
+		System.out.println("——————————————————");
+		condition_if_else();
 	}
 
 	private static void hello() {
-		System.out.println("Hello World!");
+		System.out.println("Oi");
 	}
 
 	private static void comment() {
@@ -76,5 +89,87 @@ public class fundamentos_dos_fundamentos {
 		System.out.println(text.length()+" — "+msg);
 		
 		// Obs: Tipos primitivos não tem o operador "."
+	}
+
+	private static void import_date() {
+		Date datetime = new Date();
+
+		System.out.println(datetime);
+	}
+	
+	private static void scanner_in() {
+		Scanner scan_name = new Scanner(System.in);
+
+		System.out.print("Qual seu nome ? : ");
+		String name = scan_name.nextLine();
+		
+		Scanner scan_age = new Scanner(System.in);
+		
+		System.out.print("Qual sua idade ? : ");
+		int age =  scan_age.nextInt();
+
+		System.out.printf("Seu nome é %s, e você tem %d ano(s).%n", name, age);
+	}
+
+	// wrapper dos tipos primitivos
+	private static void wrapper() {
+		Byte b = 100;
+		Short s = 1000;
+		Integer i = Integer.parseInt("10000"); // Convertendo string para inteiro
+		Long l = 100000L;
+
+		System.out.println(b.byteValue());
+		System.out.println(s.toString());
+		System.out.println(i * 3);
+		System.out.println(l / 3);
+
+		Boolean bo = Boolean.parseBoolean("true"); // Convertendo uma string "true" para boolean
+		System.out.println(bo);
+	}
+
+	private static void logical_operators() {
+		boolean condition_one = 1 > 2;
+		boolean condition_second = true;
+
+		System.out.println(condition_one && !condition_second);
+		System.out.println(condition_one || condition_second);
+		System.out.println(condition_second ^ condition_one);
+		System.out.println(!condition_one);
+		System.out.println(condition_second);
+	}
+
+	private static void condition_if_else() {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Digite um dia da semana: ");
+
+		String day = input.next();
+
+		if (day.equalsIgnoreCase("Domingo")){
+			System.out.println("Dia: 1");
+			
+		} else if (day.equalsIgnoreCase("Segunda-Feira")) {
+			System.out.println("Dia: 2");
+			
+		} else if (day.equalsIgnoreCase("Terça-Feira")) {
+			System.out.println("Dia: 3");
+			
+		} else if (day.equalsIgnoreCase("Quarta-Feira")) {
+			System.out.println("Dia: 4");
+			
+		} else if (day.equalsIgnoreCase("Quinta-Feira")) {
+			System.out.println("Dia: 5");
+			
+		} else if (day.equalsIgnoreCase("Sexta-Feira")) {
+			System.out.println("Dia: 6");
+			
+		} else if (day.equalsIgnoreCase("Sábado")) {
+			System.out.println("Dia: 7");
+
+		} else {
+			System.out.println("\nNão encontrei esse dia!");
+		}
+
+		input.close();
 	}
 }
