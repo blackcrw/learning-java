@@ -1,8 +1,8 @@
-public class Aula {
+public class Lesson {
 	public static void main(String[] args) {
 		Byte b = 100;
 		Short s = 1000;
-		Integer i = Integer.parseInt("10000"); // Convertendo string para inteiro
+		Integer i = Integer.parseInt("10000"); // Converting string to integer
 		Long l = 100000L;
 
 		System.out.println(b.byteValue());
@@ -10,7 +10,7 @@ public class Aula {
 		System.out.println(i * 3);
 		System.out.println(l / 3);
 
-		Boolean bo = Boolean.parseBoolean("true"); // Convertendo uma string "true" para boolean
+		Boolean bo = Boolean.parseBoolean("true"); // Converting a string "true" to boolean
 		System.out.println(bo);
 	}
 }

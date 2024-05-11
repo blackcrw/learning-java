@@ -1,4 +1,4 @@
-public class Aula {
+public class Lesson {
 	public static void main(String[] args) {
 		boolean condition_one = 1 > 2;
 		boolean condition_second = true;

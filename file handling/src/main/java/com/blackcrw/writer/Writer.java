@@ -1,4 +1,4 @@
-package com.srchow.writer;
+package com.blackcrw.writer;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -8,10 +8,10 @@ public class Writer {
     public static void run() {
         String[] lines = new String[] {"Good Morning", "Good Afternoon", "Good Night"};
 
-        /* Anotação
+        /* Annotation
 
-        Existem dois tipos de uso para o "FileWriter()" um é sem o true que será para criar/recriar o arquivo;
-        com true que será para incluir as palavras ao final do arquivo.
+        There are two types of usage for "FileWriter()": one without the 'true' parameter, which creates/recreates the file;
+        and one with 'true', which appends the words to the end of the file.
          */
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("out.txt"))) {
